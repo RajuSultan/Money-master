@@ -17,17 +17,23 @@
 
     <title>Money Master</title>
 </head>
-<header class="text-center mt-5 fs-1 p-2 m-3">
-    <h1 class="text-info fw-bold">Money Management Calculation</h1>
+<header>
+    <!-- Page title -->
+    <div class="text-center mt-5 fs-1 p-2 m-3">
+        <h1 class="text-info fw-bold">Money Management Calculation <span class="text-warning "> &#36;</span></h1>
+    </div>
+
 </header>
 <main>
 
 
     <section class="container py-4 px-4">
         <div class="row gx-5">
+            <!-- image part -->
             <div class=" col-lg-6  ">
                 <div class="p-3  "><img class="w-100" src="images/money.avif" alt=""></div>
             </div>
+            <!-- Calculation part -->
             <div class=" col-lg-6  ">
                 <div class="p-3 ">
                     <div class="bg-light text-center py-4">
@@ -54,6 +60,8 @@
                         <button id="cal-expanses" class="m-2 btn btn-primary px-4 py-1 ">Calculate</button>
                         <p class="py-1 fw-bold">Total Expanses: <span id="total-expanses">00</span></p>
                         <p class="py-1 fw-bold">Balance: <span id="balance">00</span></p>
+
+                        <!-- Saving part -->
                         <p class="py-1 fw-bold">Save: <input id="save-input"
                                 class="mx-2 border-0  shadow-sm p-2  bg-body rounded" type="text" name="" id=""
                                 placeholder="Enter Persentage">%
@@ -68,6 +76,7 @@
         </div>
     </section>
 </main>
+<!-- javascript link -->
 <script src="money-master.js"></script>
 
 <body>
