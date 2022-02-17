@@ -13,10 +13,12 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/3aa0d4eef2.js" crossorigin="anonymous"></script>
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
     <title>Money Master</title>
 </head>
 <header class="text-center mt-5 fs-1 p-2 m-3">
-    <h1 class="text-info fw-bold">Money Master </h1>
+    <h1 class="text-info fw-bold">Money Management Calculation</h1>
 </header>
 <main>
 
@@ -30,21 +32,24 @@
                 <div class="p-3 ">
                     <div class="bg-light text-center py-4">
                         <h1 class="py-2 fw-bold">Income</h1>
-                        <p class="py-1 fw-bold">Income: <input id="income-input"
-                                class="ms-2 border-0 shadow-sm p-2  bg-body rounded" type="text"
-                                placeholder="Enter Your Income"></p>
+                        <div>
+                            <p class="py-1 fw-bold">Income: <input id="income-input"
+                                    class="ms-2 border-0 shadow-sm p-2  bg-body rounded" type="text"
+                                    placeholder="Enter Your Income" required>
+                            </p>
+                        </div>
                         <h1 class="py-2 fw-bold">Expanses</h1>
                         <p class="py-1 fw-bold">Food: <input id="food-input"
                                 class="border-0 shadow-sm p-2  bg-body rounded" type="text"
-                                placeholder="Enter Your Cost">
+                                placeholder="Enter Your Cost" required>
                         </p>
                         <p class="py-1 fw-bold">Rent: <input id="rent-input"
                                 class="border-0 shadow-sm p-2  bg-body rounded" type="text"
-                                placeholder="Enter Your Cost">
+                                placeholder="Enter Your Cost" required>
                         </p>
                         <p class="py-1 fw-bold">Clothes: <input id="clothes-input"
                                 class="border-0 shadow-sm p-2  bg-body rounded" type="text"
-                                placeholder="Enter Your Cost">
+                                placeholder="Enter Your Cost" required>
                         </p>
                         <button id="cal-expanses" class="m-2 btn btn-primary px-4 py-1 ">Calculate</button>
                         <p class="py-1 fw-bold">Total Expanses: <span id="total-expanses">00</span></p>

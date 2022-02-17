@@ -6,26 +6,24 @@ function expansesInput(inputId) {
     if (inputValue >= 0) {
         return inputValue;
     } else {
-        console.log("Enter a Positive Number!")
+        alert("Enter a Positive Number in " + inputId + "!")
     }
 
 }
 document.getElementById("cal-expanses").addEventListener("click", function () {
     const income = expansesInput("income-input");
-    // console.log(income);
     const food = expansesInput("food-input");
     const rent = expansesInput("rent-input");
     const clothes = expansesInput("clothes-input");
     const totalExpanses = food + rent + clothes;
     const expanses = document.getElementById("total-expanses");
-    // console.log(totalExpanses);
 
     if (isNaN(totalExpanses)) {
         console.log("Enter the Valid Number!");
         expanses.innerText = "00";
     } else {
         if (totalExpanses > income) {
-            console.log("Your Expanses is over your income!");
+            alert("Your Expanses is over your income!");
             expanses.innerText = totalExpanses;
         } else {
             expanses.innerText = totalExpanses;
@@ -40,7 +38,7 @@ document.getElementById("cal-expanses").addEventListener("click", function () {
         balanceInner.innerText = "00";
     } else {
         if (balance < 0) {
-            console.log("Your are in Lose");
+            alert("Your are in Lose" + balance);
 
         } else {
             balanceInner.innerText = balance;
@@ -55,27 +53,27 @@ document.getElementById("save-btn").addEventListener("click", function () {
     const income = expansesInput("income-input");
     const savingAmount = (income * saveInputParsentageValue) / 100;
     const savingAmountInner = document.getElementById("saving-amount");
-    // savingAmountInner.innerText = savingAmount;
     const balanceInner = document.getElementById("balance");
     const balance = parseInt(balanceInner.innerText);
     const remainingAmount = balance - savingAmount;
     const remainingAmountInner = document.getElementById("remaining-amount");
-    // remainingAmountInner.innerText = remainingAmount;
     if (isNaN(saveInputParsentageValue)) {
-        console.log("Enter the Valid Number!");
+        alert("Enter the Valid Paesentage Number!");
         savingAmountInner.innerText = "00";
         remainingAmountInner.innerText = "00";
     } else {
         if (saveInputParsentageValue > 0) {
             savingAmountInner.innerText = savingAmount;
-            remainingAmountInner.innerText = remainingAmount;
+            if (remainingAmount >= 0) {
+                remainingAmountInner.innerText = remainingAmount;
+            } else {
+                remainingAmountInner.innerText = "00";
+            }
+
         } else {
-            console.log("Enter a Valid/Positive Number!");
+            alert("Enter a Valid/Positive Number as a Parsentage!");
             savingAmountInner.innerText = "00";
             remainingAmountInner.innerText = "00";
         }
     }
-
-
-    // console.log(balance);
 })

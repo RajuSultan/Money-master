@@ -1,3 +1,40 @@
-.fixed-Height{
+/* .fixed-Height{
     height: 800px;
 }
+.error-box{
+    position: relative;
+}
+.error-box .error{
+    position: absolute;
+    right: 84px;
+    top: 1px;
+
+
+}
+.error1  input{
+    
+}
+
+.error1 input{
+    border: 3px solid red;
+}
+.error1 .error{
+    color: red;
+}
+.succes input{
+    border: 3px solid green;
+}
+.succes .error{
+    color: green;
+    position: absolute;
+    right: 13px;
+    top: 1px;
+
+}
+.error1 .sms{
+    color: red;
+}
+.succes .sms{
+    color: green;
+    display: none;
+} */
