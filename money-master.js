@@ -1,4 +1,3 @@
-
 //--------food ,rent, clothes and income input function------//
 function expansesInput(inputId) {
 
@@ -11,7 +10,6 @@ function expansesInput(inputId) {
     } else {
         alert("Enter a Positive Number in " + inputId + "!")
     }
-
 }
 //------------calculation button addEventListener--------//
 document.getElementById("cal-expanses").addEventListener("click", function () {
@@ -44,7 +42,7 @@ document.getElementById("cal-expanses").addEventListener("click", function () {
     const balance = income - totalExpanses;
     //-------------Nan error check----------//
     if (isNaN(totalExpanses) || isNaN(income)) {
-        console.log("Enter the Valid Number!");
+        // console.log("Enter the Valid Number!");
         balanceInner.innerText = "00";
     } else {
         //----------negative error check-----//
@@ -71,27 +69,33 @@ document.getElementById("save-btn").addEventListener("click", function () {
     const balanceInner = document.getElementById("balance");
     const balance = parseInt(balanceInner.innerText);
     //----------remainingAmount calculation-------------//
-    const remainingAmount = balance - savingAmount;
     const remainingAmountInner = document.getElementById("remaining-amount");
-    //-------------Nan error check----------//
-    if (isNaN(saveInputParsentageValue)) {
-        alert("Enter the Valid Paesentage Number!");
-        savingAmountInner.innerText = "00";
-        remainingAmountInner.innerText = "00";
-    } else {
-        //----------negative error check-----//
-        if (saveInputParsentageValue > 0) {
-            savingAmountInner.innerText = savingAmount;
-            if (remainingAmount >= 0) {
-                remainingAmountInner.innerText = remainingAmount;
-            } else {
-                remainingAmountInner.innerText = "00";
-            }
-
-        } else {
-            alert("Enter a Valid/Positive Number as a Parsentage!");
+    const remainingAmount = balance - savingAmount;
+    //---------savingAmount more than balance amount-----//
+    if (balance >= savingAmount) {
+        //-------------Nan error check----------//
+        if (isNaN(saveInputParsentageValue)) {
+            alert("Enter the Valid Paesentage Number!");
             savingAmountInner.innerText = "00";
             remainingAmountInner.innerText = "00";
+        } else {
+            //----------negative error check-----//
+            if (saveInputParsentageValue > 0) {
+                savingAmountInner.innerText = savingAmount;
+                if (remainingAmount >= 0) {
+                    remainingAmountInner.innerText = remainingAmount;
+                } else {
+                    remainingAmountInner.innerText = "00";
+                }
+
+            } else {
+                alert("Enter a Valid/Positive Number as a Parsentage!");
+                savingAmountInner.innerText = "00";
+                remainingAmountInner.innerText = "00";
+            }
         }
+    } else {
+        alert("You don't have enough money for saving");
     }
+
 })
