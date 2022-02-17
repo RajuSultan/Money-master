@@ -5,6 +5,7 @@ function expansesInput(inputId) {
     const input = document.getElementById(inputId);
     const inputText = input.value;
     const inputValue = parseInt(inputText);
+    //--------String and negative error check-------//
     if (inputValue >= 0) {
         return inputValue;
     } else {
